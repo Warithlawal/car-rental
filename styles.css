@@ -5,27 +5,18 @@
 	 font-family: "Montserrat", sans-serif;
 }
 
+html{
+	scroll-behavior: smooth;
+}
+
+
 nav {
-    position: fixed;
-    top: 0;
-    left: 0;
     width: 100%;
     display: flex;
     background-color: white;
     justify-content: space-between;
     padding: 30px 5%;
-    z-index: 2;
     align-items: center;
-    transition: box-shadow 0.3s ease;
-}
-
-nav.scrolled {
-    box-shadow: 0 4px 2px -2px gray;
-}
-
-nav ul li a.active {
-    font-weight: bold; 
-    color: #00246B;
 }
 
 nav .fas {
@@ -83,7 +74,7 @@ body.no-scroll {
 }
 
 header {
-	margin: 130px 10% 50px;
+	margin: 10px 10% 50px;
 	display: flex;
 	align-items: center;
 	gap: 50px;
@@ -229,7 +220,7 @@ header {
 .book-a-car-form {
      display: grid;
      grid-template-columns: 1fr 1fr 1fr;
-     gap: 30px;
+     gap: 20px;
      justify-content: center;
      color: #00246B;
 }
@@ -510,6 +501,11 @@ td {
 	border-radius: 5px;
 }
 
+.reserve a { 
+	color: white;
+	text-decoration: none;
+}
+
 .banner {
 	text-align: center;
 	background-color: #00246B;
@@ -724,6 +720,8 @@ td {
 
 .faq-param {
 	max-width: 500px;
+	text-align: center;
+	padding:0 10px;
 }
 
 .faq-title {
@@ -862,6 +860,28 @@ footer {
 	outline-color: #00246B;
 }
 
+.scrollup {
+	text-decoration: none;
+	position: fixed;
+	right: 32px;
+	bottom: -50%;
+	background-color: #00246B;
+	display: inline-flex;
+	padding: 8px;
+	font-size: 22px;
+	color: white;
+	z-index: 5;
+	transition: bottom .4s, transform .4s, background-color .4s;
+}
+
+.scrollup:hover {
+	transform: translateY(-10px);
+}
+
+.show-scroll {
+	bottom: 22px;
+}
+
 
 @media only screen and (max-width: 1000px){
     .steps-container {
@@ -891,7 +911,7 @@ footer {
     nav .fas {
         display: block;
         font-size: 25px;
-        color: #450065;
+        color: #00246B;
     }
 
     nav ul {
@@ -950,6 +970,11 @@ footer {
 		align-items: left;
 		justify-content: left;
 	}
+
+	.modal {
+        width: 500px;
+        max-width: 500px;
+    }
 	
 }
 
@@ -979,6 +1004,24 @@ footer {
 		max-width: 300px;
 		overflow: hidden;
 	}
+
+	.book-a-car-form {
+		gap: 2px;
+	}
+
+	.book-a-car-form button {
+	    margin-top: 10px;
+	}
+
+	.select-wrapper::after {
+	  top: 30px;
+	  right: 25px;
+	}
+
+	.modal {
+        width: 350px;
+        max-width: 350px;
+    }
 }
 
 @media only screen and (max-width: 600px) {
@@ -1011,6 +1054,8 @@ footer {
 		max-width: 300px;
 		margin: 0 auto 40px;
 	}
+
+
 }
 
 

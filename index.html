@@ -64,17 +64,18 @@
 
 		<div class="nav-links">
 			<ul id="sidemenu">
-				<li><a href="">Home</a></li>
-				<li><a href="">About</a></li>
-				<li><a href="">Vehicle Models</a></li>
-				<li><a href="">Testimonials</a></li>
-				<li><a href="">FAQS</a></li>
-				<i class="fas fa-times" onclick="closemenu()"></i>
+				<li><a href="#home">Home</a></li>
+				<li><a href="#step">Steps</a></li>
+				<li><a href="#fleet">Vehicle Models</a></li>
+				<li><a href="#testimonial">Testimonials</a></li>
+				<li><a href="#faq">FAQS</a></li>
+				<i class="fas fa-light fa-square-xmark" onclick="closemenu()"></i>
 			</ul>
 		</div>
 
 		<div class="button-fas">
-            <i class="fas fa-bars" onclick="openmenu()"></i>
+			<i class=" fas fa-light fa-bars-sort" onclick="openmenu()"></i>
+            
             <!--<button class="get-started-button">Get Started</button>-->
             <button class="sign-in">Sign in</button>
         </div>
@@ -82,14 +83,14 @@
 		
 	</nav>
 
-	<header>
+	<header id="home">
 		<div class="head-info">
 			<h3>Plan your trip now</h3>
 			<h1>Save <span class="big">big</span> with our car rental</h1>
 			<p>Rent the car of your dreams. Unbeatable prices. unlimited miles.
 			flexible pick-up options and much more.</p>
 			<div class="btns">
-				<a class="btn-book" href="">Book Ride <i class="fas fa-check-circle"></i></a>
+				<a class="btn-book" href="#book">Book Ride <i class="fas fa-check-circle"></i></a>
 				<a class="btn-learn" href="">Learn More <i class="fas fa-chevron-right"></i></a>
 			</div>
 		</div>
@@ -105,13 +106,13 @@
 		</div>
 		
 		<div class="display-container">
-			<div class="display-img item1"><img src="images/toyota2.avif"><a class="book-position" href="#">Book now</a></div>
-			<div class="display-img item2"><img src="images/toyota3.avif"><a class="book-position" href="#">Book now</a></div>
-			<div class="display-img item3"><img src="images/toyota4.avif"><a class="book-position" href="#">Book now</a></div>
+			<div class="display-img item1"><img src="images/toyota2.avif"><a class="book-position" href="#book">Book now</a></div>
+			<div class="display-img item2"><img src="images/toyota3.avif"><a class="book-position" href="#book">Book now</a></div>
+			<div class="display-img item3"><img src="images/toyota4.avif"><a class="book-position" href="#book">Book now</a></div>
 		</div>
 	</section>
 
-	<section class="book-a-car">
+	<section class="book-a-car" id="book">
 	    <h2>Book a car</h2>
 	    <div class="book-a-car-form">
 	        <!-- Car Selection -->
@@ -172,7 +173,7 @@
 	    <div id="overlay-2"></div>
 	</section>
 
-	<section class="steps">
+	<section class="steps" id="step">
 		<div class="step-header">
 			<p>Plan your trip now</p>
 			<h2>Quick & easy car rental</h2>
@@ -207,7 +208,7 @@
 		</div>
 	</section>
 
-	<section>
+	<section id="fleet">
 		<div class="fleet-header">
 			<h3>Vehicle Models</h3>
 			<h1>Our rental fleet</h1>
@@ -262,7 +263,7 @@
 		            </tr>
 		        </table>
 
-		        <button class="reserve">Reserve Now</button>
+		        <button class="reserve"><a href="#book">Reserve Now</a></button>
 		    </div>
 		</div>
 	</section>
@@ -313,7 +314,7 @@
 		</div>
 	</section>
 
-	<section class="testimonials-container">
+	<section class="testimonials-container" id="testimonial">
 		<div class="testimonials-head">
 			<h3>Reviewed by People</h3>
 			<h1>Client's Testimonials</h1>
@@ -415,7 +416,7 @@
 		</div>
 	</section>
 
-	<section class="faq-section">
+	<section class="faq-section" id="faq">
         <h2 class="faq-title">FAQs</h2>
         <p class="faq-param">Frequently Asked Questions About the Car Rental Booking Process on Our Website. Answer to Common Concerns and inquires.</p>
 
@@ -441,7 +442,7 @@
                 </p>
             </div>
         </div>
-        <div class="faq">
+        <div class="faq" >
             <div class="faq-question">
                 <h3>3. How do i find such low rental car prices?</h3>
                 <i class="fas fa-chevron-right"></i>
@@ -501,7 +502,9 @@
     	</div>
     </footer>
 
-
+    <a href="#" class="scrollup" id="scroll-up">
+    	<i class="fa-sharp fa-light fa-chevron-up"></i>
+    </a>
 
 
 
