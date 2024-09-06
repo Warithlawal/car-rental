@@ -434,7 +434,7 @@ select {
 
 .fleet {
     display: grid;
-    grid-template-columns: 150px 500px 300px;
+    grid-template-columns: 250px 500px 250px;
     justify-content: center;
     align-items: center;
     margin: 0 20px 50px;
@@ -463,6 +463,11 @@ select {
     height: 350px;
     margin: 0 auto;
     object-fit: contain;
+}
+
+.amount {
+	font-weight: 600;
+	font-size: 25px;
 }
 
 table {
@@ -555,6 +560,7 @@ td {
 .choose-us p {
 	font-weight: 300;
 	margin-bottom: 40px;
+	text-align: justify;
 }
 
 .choose-us-2-content {
@@ -870,7 +876,7 @@ footer {
 	padding: 8px;
 	font-size: 22px;
 	color: white;
-	z-index: 5;
+	z-index: 2;
 	transition: bottom .4s, transform .4s, background-color .4s;
 }
 

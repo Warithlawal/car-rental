@@ -77,8 +77,8 @@ function addBooking(event) {
     const dropOffDateObj = new Date(dropOffDate);
     const day = pickUpDateObj.getDay();
 
-    if (day === 0 || day === 6) {
-        alert('Please select a weekday (Monday to Friday) for pick-up.');
+    if (day === 0 || day === 7) {
+        alert('Please select from (Monday to Satuday) for pick-up.');
         event.preventDefault();
         return;
     }
@@ -148,6 +148,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const carDetails = {
         toyota: {
             image: 'images/toyota.webp',
+            price: '$140 / per day',
             model: 'Toyota',
             mark: 'XLE',
             year: '2024',
@@ -158,9 +159,10 @@ document.addEventListener('DOMContentLoaded', () => {
         },
         bmw: {
             image: 'images/bmw.jpeg',
+            price: '$220 / per day',
             model: 'BMW',
             mark: 'X7',
-            year: '2024',
+            year: '2023',
             doors: '4',
             ac: 'Yes',
             transmission: 'Automatic',
@@ -168,9 +170,10 @@ document.addEventListener('DOMContentLoaded', () => {
         },
         audi: {
             image: 'images/audii.jpeg',
+            price: '$200 / per day',
             model: 'Audi',
             mark: 'Q6 Suv',
-            year: '2019',
+            year: '2022',
             doors: '4',
             ac: 'Yes',
             transmission: 'Automatic',
@@ -178,16 +181,18 @@ document.addEventListener('DOMContentLoaded', () => {
         },
         mercedes: {
             image: 'images/benz.jpeg',
+            price: '$300 / per day',
             model: 'Mercedes',
             mark: 'Maybach SUV',
-            year: '2019',
+            year: '2023',
             doors: '4',
             ac: 'Yes',
-            transmission: 'Automatic',
+            transmission: 'Manual',
             fuel: 'Diesel'
         },
         porsche: {
             image: 'images/porssche.jpg',
+            price: '$150 / per day',
             model: 'porsche',
             mark: 'Panamera',
             year: '2019',
@@ -199,6 +204,7 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     const carModelElements = document.querySelectorAll('.car-model');
+    const carPrice = document.getElementById('price');
     const carImage = document.getElementById('car-img');
     const modelElement = document.getElementById('model');
     const markElement = document.getElementById('mark');
@@ -207,6 +213,22 @@ document.addEventListener('DOMContentLoaded', () => {
     const acElement = document.getElementById('ac');
     const transmissionElement = document.getElementById('transmission');
     const fuelElement = document.getElementById('fuel');
+
+    // Set Toyota as the active model by default
+    const setActiveModel = (modelKey) => {
+        const car = carDetails[modelKey];
+        carImage.src = car.image;
+        carPrice.innerHTML = `<span class="amount">${car.price}</span>`; // Add class here
+        modelElement.textContent = car.model;
+        markElement.textContent = car.mark;
+        yearElement.textContent = car.year;
+        doorsElement.textContent = car.doors;
+        acElement.textContent = car.ac;
+        transmissionElement.textContent = car.transmission;
+        fuelElement.textContent = car.fuel;
+    };
+
+    setActiveModel('toyota'); // Set Toyota details as default
 
     carModelElements.forEach(element => {
         element.addEventListener('click', () => {
@@ -217,21 +239,11 @@ document.addEventListener('DOMContentLoaded', () => {
             element.classList.add('active');
 
             const modelKey = element.getAttribute('data-model');
-            const car = carDetails[modelKey];
-
-            if (car) {
-                carImage.src = car.image;
-                modelElement.textContent = car.model;
-                markElement.textContent = car.mark;
-                yearElement.textContent = car.year;
-                doorsElement.textContent = car.doors;
-                acElement.textContent = car.ac;
-                transmissionElement.textContent = car.transmission;
-                fuelElement.textContent = car.fuel;
-            }
+            setActiveModel(modelKey);
         });
     });
 });
+
 
 const left = document.querySelector(".left");
 const right = document.querySelector(".right");
