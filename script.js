@@ -10,6 +10,7 @@ window.addEventListener('scroll', function() {
 const sideMenu = document.getElementById('sidemenu');
 const overlay = document.getElementById('overlay');
 const body = document.body;
+const navLinks = document.querySelectorAll('#sidemenu a');
 
 function openmenu() {
     sideMenu.style.right = "0";
@@ -25,6 +26,10 @@ function closemenu() {
 }
 
 overlay.addEventListener('click', closemenu);
+
+navLinks.forEach(link => {
+    link.addEventListener('click', closemenu);
+});
 
 
 

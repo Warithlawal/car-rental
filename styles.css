@@ -598,7 +598,7 @@ td {
 
 .testimonials-container {
 	margin: 50px 8%;
-	padding: 50px;
+	padding: 20px 20px;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -648,19 +648,20 @@ td {
 }
 
 .testimonial-avi {
-	width: 40px;
+	max-width: 40px;
 	border-radius: 50%;
 }
 
 .testimonial-avi-grid {
 	display: flex;
-	gap: 18px;
+	gap: 15px;
 	color: #00246B;
 }
 
 .testimonial-avi-flex {
 	display: flex;
 	justify-content: space-between;
+	width: 100%;
 }
 
 .testimonial-avi-flex i {
@@ -1000,6 +1001,7 @@ footer {
 
 	.steps-container {
 		grid-template-columns: 500px;
+		gap: 50px;
 	}
 
 	.why-choose-us {
@@ -1033,6 +1035,7 @@ footer {
 @media only screen and (max-width: 600px) {
 	.steps-container {
 		grid-template-columns: 1fr;
+		gap: 20px;
 	}
 
 	.book-a-car-form {
@@ -1045,6 +1048,14 @@ footer {
 
 	.why-choose-us {
 		grid-template-columns: 1fr ;
+	}
+
+	.choose-us p{
+		font-size: 15px;
+	}
+
+	.choose-us-2-content p {
+		font-size: 15px;
 	}
 
 	.button {
