@@ -65,10 +65,10 @@
 		<div class="nav-links">
 			<ul id="sidemenu">
 				<li><a href="#home">Home</a></li>
+				<li><a href="#booking">Booking</a></li>
 				<li><a href="#step">Steps</a></li>
-				<li><a href="#fleet">Vehicle Models</a></li>
+				<li><a href="#fleet"> Fleet</a></li>
 				<li><a href="#testimonial">Testimonials</a></li>
-				<li><a href="#faq">FAQS</a></li>
 				<i class="fas fa-light fa-square-xmark" onclick="closemenu()"></i>
 			</ul>
 			<div class="button-fas">
@@ -106,66 +106,125 @@
 		</div>
 	</section>
 
-	<section class="book-a-car" id="book">
-	    <h2>Book a car</h2>
-	    <div class="book-a-car-form">
-	        <!-- Car Selection -->
-	        <div class="book-input">
-	            <div><i class="fas fa-car"></i> Select your car type</div>
-	            <div class="select-wrapper">
-	                <select class="js-select-car" required>
-	                    <option value="">--</option>
-	                    <option value="Toyota">Toyota</option>
-	                    <option value="BMW">BMW</option>
-	                    <option value="Mercedes">Mercedes</option>
-	                    <option value="Audi">Audi</option>
-	                    <option value="Porsche">Porsche</option>
-	                </select>
-	            </div>
-	        </div>
+	<section class="cars" id="booking">
+		<div class="cars-head">
+			<h2>Choose Your Vehicle</h2>
+			<p>Select from our wide range of premium vehicles</p>
+		</div>
 
-	        <!-- Pick-up Location -->
-	        <div class="book-input">
-	            <div><i class="fas fa-map-marker-alt"></i> Pick up location</div>
-	            <input class="js-pick-up-input" type="text" placeholder="Input pick-up location" required>
-	        </div>
+		<div class="cars-link">
+			<a href="" class="active">All</a>
+			<a href="">Economy</a>
+			<a href="">SUV</a>
+			<a href="">Luxury</a>
+			<a href="">Sports</a>
+		</div>
 
-	        <!-- Drop-off Location -->
-	        <div class="book-input">
-	            <div><i class="fas fa-map-marker-alt"></i> Drop off location</div>
-	            <input class="js-drop-off-input" type="text" placeholder="Input drop off location" required>
-	        </div>
-
-	        <!-- Pick-up Date -->
-	        <div class="book-input">
-	            <div><i class="fas fa-calendar-alt"></i> Pick-up</div>
-	            <input class="js-pick-up-date-input" type="date" required>
-	        </div>
-
-	        <!-- Drop-off Date -->
-	        <div class="book-input">
-	            <div><i class="fas fa-calendar-alt"></i> Drop-off</div>
-	            <input class="js-drop-off-date-input" type="date" required>
-	        </div>
-
-	        <!-- Submit Button -->
-	        <div>
-	            <button class="js-book-button" data-modal-target="#modal">Submit</button>
-	        </div>
-	    </div>
-
-	    <!-- Modal Structure -->
-	    <div class="modal" id="modal">
-	        <div class="modal-header">
-	            <h2>Your ride has been successfully booked</h2>
-	            <button data-close-button class="close-button">&times;</button>
-	        </div>
-	        <div class="modal-body">
-	            <div class="js-booking"></div>
-	        </div>
-	    </div>
-	    <div id="overlay-2"></div>
+		<div class="cars-grid"></div>
 	</section>
+
+	<div class="booking-overlay"></div>
+
+	<section class="booking-sec">
+	  <div class="booking-head">
+	    <h1>Book Your Car</h1>
+	    <i class="fa-light fa-xmark-large close-booking"></i>
+	  </div>
+
+	  <div class="car-form-details">
+	    <div class="car-form-img">
+	      <img src="" alt="Car Image" id="booking-car-img">
+	    </div>
+	    
+	    <div class="car-form-img-details">
+	      <h3 id="booking-car-name">Car Name</h3>
+	      <p id="booking-car-category">Category</p>
+	      <h2 id="booking-car-price">$0/day</h2>
+	    </div>
+	  </div>
+
+		<form id="booking-form">
+		  <label>Full Name</label><br>
+		  <input type="text" name="fullName" placeholder="Full name" required><br>
+
+		  <label>E-mail</label><br>
+		  <input type="email" name="email" placeholder="E-mail" required><br>
+
+		  <label>Phone</label><br>
+		  <input type="text" name="phone" placeholder="Phone number" required><br>
+
+		  <label>Pick-up Location</label><br>
+		  <input type="text" name="location" placeholder="Location" required><br>
+
+		  <div class="date-flex">
+		    <div>
+		      <label>Pick-up Date</label><br>
+		      <input type="date" name="pickup" required>
+		    </div>
+		    <div>
+		      <label>Return Date</label><br>
+		      <input type="date" name="return" required>
+		    </div>
+		  </div>
+
+		  <button type="submit">Confirm Booking</button>
+		</form>
+	</section>
+
+	<section class="confirm-booking-sec hidden">
+	  <div class="confirmed-cont">
+	    <div class="booking-confirmed">
+	      <div class="gif-container">
+	        <img src="images/success.gif">
+	      </div>
+	      <h3>Booking Confirmed!</h3>
+	      <p class="confirm-message">Your reservation has been confirmed.</p>
+	    </div>
+
+	    <div class="booking-details">
+	      <h3>Booking Details:</h3>
+	      <div class="booking-p">
+	        <p><span class="pspan">Vehicle:</span> <span id="confirm-vehicle">Toyota Camry</span></p>
+	        <p><span class="pspan">Pick-up:</span> <span id="confirm-pickup">2025-11-12 at Lagos</span></p>
+	        <p><span class="pspan">Return:</span> <span id="confirm-return">2025-11-13</span></p>
+	        <p><span class="pspan">Total:</span> <span id="confirm-total">$45 per day</span></p>
+	      </div>
+	    </div>
+	    <button id="close-confirm">Close</button>
+	  </div>
+	</section>
+
+	<!--=======================
+     CANCEL CONFIRMATION MODAL
+=========================== -->
+<div id="cancelModal" class="modal-overlay">
+  <div class="modal-box">
+    <h2>Cancel Reservation?</h2>
+    <p>Are you sure you want to cancel this booking? This action cannot be undone.</p>
+    <div class="modal-actions">
+      <button id="confirmCancel" class="btn confirm">Yes, Cancel</button>
+      <button id="closeModal" class="btn cancel">Keep Booking</button>
+    </div>
+  </div>
+</div>
+
+
+<section class="bookings-container">
+  <div class="bookings">
+    <h1>My Bookings</h1>
+    <p>View and manage your car reservations</p>
+  </div>
+
+  <div class="reservation-container">
+
+    <!-- JS dynamically fills this -->
+    <div class="reservations-grid"></div>
+
+     <div class="no-bookings-gridd"></div>
+  </div>
+
+</section>
+
 
 	<section class="steps" id="step">
 		<div class="step-header">
@@ -256,8 +315,6 @@
 		                <td id="fuel">Gasoline</td>
 		            </tr>
 		        </table>
-
-		        <button class="reserve"><a href="#book">Reserve Now</a></button>
 		    </div>
 		</div>
 	</section>
@@ -266,6 +323,8 @@
 		<h1>Save big with our cheap car rental</h1>
 		<p>Top Airports. Local Suppliers. <span>24/7</span> Support.</p>
 	</section>
+
+	
 
 	<section class="why-choose-us-container">
 		<div class="choose-us-img">
@@ -500,8 +559,18 @@
     	<i class="fa-sharp fa-light fa-chevron-up"></i>
     </a>
 
+ <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+<script>
+  (function() {
+    emailjs.init("NFZ_9PV6-OtVKjKQB"); // 🔑 Replace with your actual EmailJS public key
+  })();
+</script>
 
 
 </body>
+<!-- SweetAlert2 CDN -->
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
 <script src="script.js"></script>
+<script src="car.js"></script>
 </html>
