@@ -2,7 +2,7 @@
 	box-sizing: border-box;
 	margin: 0;
 	padding: 0;
-	 font-family: "Montserrat", sans-serif;
+	font-family: "Montserrat", sans-serif;
 }
 
 html{
@@ -277,7 +277,7 @@ header {
 .btn-learn {
 	text-decoration: none;
 	color: #2563EB;
-	background-color: #CADCFC;
+	border: 0.5px solid #2563EB;
 	padding: 10px 15px;
 	display: flex;
 	gap: 10px;
@@ -301,10 +301,6 @@ header {
 	gap: 30px;
 }
 
-.xplore h4, 
-.xplore h1 {
-	color: #2563EB;
-}
 
 .display-container {
 	display: grid;
@@ -358,7 +354,7 @@ header {
 
 .steps {
 	text-align: center;
-	margin: 0 5% 80px;
+	margin: 0 5% 40px;
 	padding: 40px;
 	background-color: #F5F4F8;
 	border-radius: 10px;
@@ -367,7 +363,6 @@ header {
  .step-header p,
  .step-header h2{
 	padding-bottom: 20px;
-	color: #2563EB;
 }
 
 .step-header {
@@ -404,30 +399,25 @@ header {
 
 .step-trip h3 {
 	margin-bottom: 20px;
-	color: #2563EB;
 	font-weight: 400;
 }
 
 .step-trip p {
 	font-size: 15px;
 	font-weight: 300;
-	color: #2563EB;
 }
 
 .fleet-header {
 	text-align: center;
 	max-width: 500px;
+	padding-top: 40px;
 	margin: 0 auto 40px;
 	display: flex;
 	flex-direction: column;
 	gap: 15px;
 }
 
-.fleet-header h3,
-.fleet-header h1,
-.fleet-header p {
-	color: #2563EB;
-}
+
 
 .fleet {
     display: grid;
@@ -443,7 +433,6 @@ header {
     margin-bottom: 10px;
     font-weight: 300;
     border-radius: 5px;
-    color: #2563EB;
 }
 
 .car-models h3.active {
@@ -474,7 +463,7 @@ table {
 }
 
 td, th {
-    border: 0.5px solid #2563EB;
+    border: 0.5px solid black;
     text-align: center;
     padding: 10px 15px;
     font-size: 14px;
@@ -489,23 +478,6 @@ th {
 
 td {
     width: 50%;
-    color: #2563EB;
-}
-
-.reserve {
-	margin: 10px 0 0 0;
-	width: 100%;
-	padding: 10px 15px;
-	background-color: #2563EB;
-	color: white;
-	border: none; 
-	cursor: pointer;
-	border-radius: 5px;
-}
-
-.reserve a { 
-	color: white;
-	text-decoration: none;
 }
 
 .banner {
@@ -1138,7 +1110,6 @@ form button {
 .choose-us h3,
 .choose-us h1 {
 	margin-bottom: 10px;
-	color: #2563EB;
 }
 
 .choose-us p {
@@ -1163,12 +1134,10 @@ form button {
 
 .choose-us-2-content h3 {
 	padding-bottom: 10px;
-	color: #2563EB;
 }
 
 .choose-us-2-content p {
 	font-weight: 300;
-	color: #2563EB;
 }
 
 
@@ -1177,6 +1146,7 @@ form button {
 	padding: 10px 15px;
 	text-decoration: none;
 	color: white;
+	border-radius: 12px;
 }
 
 
@@ -1200,18 +1170,12 @@ form button {
 	margin: 0 auto;
 }
 
-.testimonials-head {
-	color: #2563EB;
-}
-
 .testimonials-head p {
 	font-weight: 300;
 }
 
 
 .testimonials-carosel {
-	/*display: grid;
-	grid-template-columns: 300px 300px 300px 300px 300px 300px;*/
 	gap: 50px;
 	text-align: justify;
 }
@@ -1239,7 +1203,6 @@ form button {
 .testimonial-avi-grid {
 	display: flex;
 	gap: 15px;
-	color: #2563EB;
 }
 
 .testimonial-avi-flex {
@@ -1255,7 +1218,6 @@ form button {
 
 .testi-box h4 {
 	font-weight: 400;
-	color: #2563EB;
 }
 
 .button {
@@ -1282,6 +1244,7 @@ form button {
 	background-color: #2563EB;
 	cursor: pointer;
 	transition: 0.5s ease-out;
+	border-radius: 8px;
 }
 
 
@@ -1306,7 +1269,6 @@ form button {
 
 .faq-section p {
     margin-bottom: 15px;
-    color: #2563EB;
 }
 
 .faq-param {
@@ -1317,12 +1279,11 @@ form button {
 
 .faq-title {
     font-size: 40px;
-    color: #2563EB;
 }
 
 .faq {
     max-width: 800px;
-    border-bottom: 0.5px solid #2563EB;
+    border-bottom: 0.5px solid black;
     cursor: pointer;
     margin: 0 30px;
 }
@@ -1335,12 +1296,10 @@ form button {
 }
 .faq-question h3 {
     font-weight: 500;
-    color: #2563EB;
 }
 
 .faq-question i{
     font-size: 10px;
-    color: #2563EB;
 }
 
 .faq-answer {
@@ -1659,6 +1618,9 @@ footer {
 		margin: 0 auto 40px;
 	}
 
+	.date-flex {
+		grid-template-columns: 1fr;
+	}
 
 }
 
