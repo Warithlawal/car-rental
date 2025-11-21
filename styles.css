@@ -9,6 +9,12 @@ html{
 	scroll-behavior: smooth;
 }
 
+body.no-scroll {
+    overflow: hidden;
+    height: 100vh;
+}
+
+
 /* ============================
    MODERN TOAST NOTIFICATION
 =============================== */
@@ -690,6 +696,9 @@ td {
   border-radius: 1rem;
   box-shadow: 0 10px 40px rgba(0, 0, 0, 0.25);
   transition: all 0.3s ease;
+  max-height: 90vh;  
+  overflow-y: auto;
+   -webkit-overflow-scrolling: touch;
 }
 
 .booking-head {
@@ -759,6 +768,13 @@ input {
 	grid-template-columns: 1fr 1fr;
 	gap: 10px;
 }
+
+.date-flex input[type="date"] {
+	  background-color: #fff;
+	  padding: 12px;
+	  border-radius: 8px;
+	  border: 1px solid #ddd;
+	}
 
 form label {
 	font-size: 14px;
@@ -1624,11 +1640,6 @@ footer {
 
 	.date-flex {
 		grid-template-columns: 1fr;
-		padding-right: 32px;
-	}
-
-	.date-flex input {
-		width: 100%;
 	}
 
 	.cars,

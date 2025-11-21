@@ -202,11 +202,17 @@ function openBookingPopup(car) {
 
   bookingSection.classList.add("active");
   bookingOverlay.classList.add("active");
+
+  // ✅ Disable scrolling
+  document.body.classList.add("no-scroll");
 }
 
 function closeBookingPopup() {
   bookingSection.classList.remove("active");
   bookingOverlay.classList.remove("active");
+
+  // ✅ Re-enable scrolling
+  document.body.classList.remove("no-scroll");
 }
 
 if (bookingOverlay) bookingOverlay.addEventListener("click", closeBookingPopup);
@@ -221,6 +227,7 @@ function attachBookingListeners() {
     });
   });
 }
+
 
 // ================================
 // CONFIRMATION POPUP + LOCAL STORAGE
