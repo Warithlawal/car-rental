@@ -1624,6 +1624,7 @@ footer {
 
 	.date-flex {
 		grid-template-columns: 1fr;
+		padding-right: 32px;
 	}
 
 	.date-flex input {
