@@ -794,6 +794,9 @@ form button {
 	visibility: hidden;
 	pointer-events: none;
 	transition: opacity 0.4s ease, visibility 0.4s ease;
+	 overflow-y: auto;     
+   align-items: flex-start; 
+   padding: 20px 0;
 }
 
 .confirm-booking-sec.visible {
@@ -810,6 +813,9 @@ form button {
 	border-radius: 16px;
 	width: 95%;
 	max-width: 480px;
+	max-height: 100%;
+  overflow-y: auto;  
+  margin-top: 40px;
 	padding: 24px;
 	box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
 	transform: translateY(30px);
@@ -987,7 +993,7 @@ form button {
 	gap: 30px;
 	justify-content: center;
 	opacity: 1;
-  	transition: opacity 0.4s ease;
+  transition: opacity 0.4s ease;
 }
 
 .reservations-card {
@@ -1618,6 +1624,10 @@ footer {
 
 	.date-flex {
 		grid-template-columns: 1fr;
+	}
+
+	.date-flex input {
+		width: 100%;
 	}
 
 	.cars,
