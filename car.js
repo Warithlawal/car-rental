@@ -249,7 +249,7 @@ function refreshReservations() {
         <i class="fa-solid fa-calendar-days"></i>
         <h2>No bookings yet</h2>
         <p>Start exploring our premium vehicle collection and make your first reservation today</p>
-        <button onclick="window.location.href='index.html'">Browse Cars</button>
+        <button onclick="window.location.href='#booking'">Browse Cars</button>
       </div>`;
     return;
   }
